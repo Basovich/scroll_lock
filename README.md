@@ -6,4 +6,4 @@ Small plugins for disable scroll
 - disableScroll() - для отключения скрола;
 - enableScroll() - для включения скрола.
 
- Смотрите пример в верстке - https://basovich.github.io/scroll_lock/
+ Смотрите пример в верстке - https://basovich.github.io/scroll_locker/
