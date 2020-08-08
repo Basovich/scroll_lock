@@ -1,4 +1,4 @@
-# scroll_lock
+# scroll_locker
 Small plugins for disable scroll
 
 1. Подключаем файл как любой js файл к html странице. Очередность как всегда важна.
