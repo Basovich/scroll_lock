@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 300vh;
+            width: 100%;
+        }
+
+        .wrap {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <button class="js-disable-scroll">Убрать скролл</button>
+        <button class="js-enable-scroll">Включить скролл</button>
+    </div>
+ 
+    
+
+    <script src="scroll_lock.js"></script>
+
+    <script>
+        window.addEventListener('load', function(){          
+            
+
+            const btnDisable = document.querySelector('.js-disable-scroll');
+            btnDisable.addEventListener('click', function() {                
+                disableScroll();           
+            })
+
+            const btnEnable = document.querySelector('.js-enable-scroll');
+            btnEnable.addEventListener('click', function() {                
+                enableScroll();            
+            })
+
+
+        })
+    </script>
+</body>
+</html>
