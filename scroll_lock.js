@@ -4,11 +4,11 @@
             return false;
         }
         let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
-        let pagePosition = window.scrollY;
+        let pagePosition = window.pageYOffset;  
         document.body.style.paddingRight = paddingOffset;
         document.body.classList.add('disable-scroll');
         setStyleDisableScroll();
-        document.body.dataset.position = pagePosition;
+        document.body.setAttribute('data-position', pagePosition);
         document.body.style.top = -pagePosition + 'px';
     }
 
@@ -16,12 +16,12 @@
         if (!document.body.classList.contains('disable-scroll')) {
             return false;
         }
-        let pagePosition = parseInt(document.body.dataset.position, 10);
+        let pagePosition = document.body.getAttribute('data-position');
         document.body.style.top = 'auto';
         document.body.classList.remove('disable-scroll');
         setStyleEnableScroll()
         document.body.style.paddingRight = '';
-        window.scroll({ top: pagePosition, left: 0 });
+        window.scrollTo(0, pagePosition);  
         document.body.removeAttribute('data-position');
     }
 
